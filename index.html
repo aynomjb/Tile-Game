@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="game-area bg-info">
+        <div class="game-container">
+            <div>
+
+                <!-- Landing Screen Start -->
+                <div class="" id="start-game-area">
+                    <button class="btn btn-light btn-drop" onclick="selectLevel()">START</button>
+                </div>
+                <!-- Landing Screen Close -->
+
+                <!-- Select Game Level Screen Start -->
+                <div class="d-none" id="select-level-area">
+                    <div class="form-group">
+                        <label>
+                            <h3 class="text-white">Select Level</h3></label>
+                        <select class="form-control" id="select-level">
+                            <option value="3">3 X 3</option>
+                            <option value="4">4 X 4</option>
+                            <option value="5">5 X 5</option>
+                            <option value="6">6 X 6</option>
+                            <option value="7">7 X 7</option>
+                            <option value="8">8 X 8</option>
+                            <option value="9">9 X 9</option>
+                            <option value="10">10 X 10</option>
+                        </select>
+                    </div>
+                    <buton class="btn btn-light btn-drop" onclick="newGame()">PLAY </buton>
+                </div>
+                <!-- Select Game Level Screen Close -->
+
+                <!-- Main Game Screen Start -->
+                <div class="d-none" id="gameSpace-container">
+                    <div class="game-instructions">
+                        <div class="a-instruction">
+                            <div class="color-index bg-success">
+                            </div>
+                            <div class="text-white">
+                                &nbsp;Tile in Correct Position
+                            </div>
+                        </div>
+                        <div class="a-instruction">
+                            <div><strong>Onhover: &nbsp;</strong></div>
+                            <div class="color-index bg-primary">
+                            </div>
+                            <div class="text-white">
+                                &nbsp;Tile Moveable
+                            </div>
+                        </div>
+                        <div class="a-instruction">
+                            <div class="color-index bg-danger">
+                            </div>
+                            <div class="text-white">
+                                &nbsp;Tile Not Moveable
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gameSpace">
+
+                    </div>
+                    <div class="new-game-btn-area">
+                        <center>
+                            <button class="btn btn-light btn-drop" onclick="selectLevel()">
+                                New Game
+                            </button>
+                        </center>
+                    </div>
+                </div>
+                <!-- Main Game Screen Close -->
+
+            </div>
+        </div>
+    </div>
+
+
+   <!-- Modal start -->
+    <div class="game-modal d-none" id="game-modal">
+        <div class="modal-container">
+            <div class="text-white">
+                <div>YOU WON!!!</div>
+                <center>
+                    <button class="btn btn-light btn-drop" onclick="selectLevel()">
+                        New Game
+                    </button>
+                </center>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Close -->
+
+    <script src="js/main.js">
+    </script>
+</body>
+
+</html>
